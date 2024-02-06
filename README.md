@@ -19,6 +19,7 @@ step 3: Sync Terminal with Github (run lines below in Terminal)
   - can use get pull to get changes from an existing repository (https://docs.github.com/en/get-started/using-git/getting-changes-from-a-remote-repository)
             - $ git pull REMOTE-NAME BRANCH-NAME
               # Grabs online updates and merges them with your local work
+              If you do a git pull origin <remote branch name>, it will fetch the remote branch and then merge it into your current local branch.
 
 ref: https://stackoverflow.com/questions/8196544/what-are-the-git-concepts-of-head-master-origin
 
