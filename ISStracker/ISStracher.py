@@ -16,6 +16,9 @@ import requests
 #import urllib.requests
 #import json
 
+# import folium library to plot map overlay and ISS/User markers
+import folium
+
 # APIs to access data on ISS and User location (if time permiting)
 ISS_API = "http://api.open-notify.org/iss-now.json"
 
@@ -29,11 +32,20 @@ def returnISSdata():
 
 def main():
     """runtime function"""
-    #Use ISStracker API to get ISS location information
+    ## Use ISStracker API to get ISS location information
     ISS_data = returnISSdata()
-    #Test that can aquire data using API
+    ## Test that can aquire data using API
     print(ISS_data)
-    #Parce returned API data into a list or variables
+    ## Parce returned API data into a list or variables
+    
+
+    ## create map 
+    m = folium.Map(location=(45.5236, -122.6750))
+    ## save as .html file 
+    m.save("index.html")
+    ## test opening file in web browser
+    firefox index.html
+
 
 # call our main function
 if __name__ == "__main__":
